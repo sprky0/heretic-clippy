@@ -42,8 +42,10 @@ pre {font-family: courier;margin: 10px 0 10px 0;padding: 0;}
 	left: -3em;
 	top: 2.5em;
 	transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
 	-moz-transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
+	box-shadow: 0 0 15px rgba(40,40,40,.5);
 }
 .ribbon a {
   border: 1px solid #faa;
