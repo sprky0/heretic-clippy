@@ -28,7 +28,7 @@
 
 	<div id="clipzone"><img src="<?php echo $base_url; ?>images/clippy-main.png" width="102" height="98" alt="" class="mr_clippy" /></div>
 
-	<button onclick="new Clippy('body','<?php echo $base_url . $version; ?>/').run({override:true});">Try It!</button>
+	<button onclick="this.setAttribute('disabled',1);new Clippy('body','<?php echo $base_url . $version; ?>/').run({override:true});">Try It!</button>
 	<button onclick="document.getElementById('textzone').style.display='block'; this.parentNode.removeChild(this);">Shut the hell up and give me the code</button>
 
 	<div id="textzone">
@@ -63,7 +63,7 @@ __clippyboot(function(){
 
 	</div>
 
-	<p>This script will check on pageload to see if the User is running IE6.  If so, Heretic Clippy will appear and offer some browser alternatives.  Quite annoying!  Yet, certainly not as annoying as supporting a browser more than <?php echo $ie6_age; ?> years after it's first release (and 3 major revisions out of date).</p>
+	<p>This script will check on pageload to see if the User is running IE6.  If so, Heretic Clippy will appear and offer some browser alternatives.  Quite annoying!  Yet, certainly not as annoying as supporting a browser more than <?php echo $ie6_age; ?> years after it's first release (and several major revisions out of date).</p>
 
 	<pre>
 @version 1.0.2
