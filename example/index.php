@@ -2,8 +2,9 @@
 
 	// The URL to the directory, ending without a trailing slash
 	$base_url = "./";
-	$version = "1.0.2";
+	$version = "../minified/";
 
+	
 	date_default_timezone_set('America/New_York');
 
 	$ie6_age = date('Y') - 2001;
@@ -22,7 +23,7 @@
 </head>
 <body>
 
-<div id="wrap"> 
+<article id="wrap"> 
 
 	<h1>Heretic Clippy</h1>
 
@@ -72,7 +73,11 @@ __clippyboot(function(){
 
 	<br class="clear" />
 
-</div>
+</article>
+
+<aside class="ribbon">
+	<a href="https://github.com/sprky0/Heretic-Clippy/">Fork me on GitHub</a>
+</aside>
 
 </body>
 </html>
