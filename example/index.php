@@ -1,10 +1,9 @@
 <?php
 
 	// The URL to the directory, ending without a trailing slash
-	$base_url = "./";
+	$base_url = "/example/";
 	$version = "../minified/";
 
-	
 	date_default_timezone_set('America/New_York');
 
 	$ie6_age = date('Y') - 2001;
@@ -18,8 +17,9 @@
 <html>
 <head>
 	<title>Heretic Clippy</title>
-	<script type="text/javascript" src="<?php echo $base_url . $version; ?>/ie6.js"></script>
-	<link rel="stylesheet" media="all" href="<?php echo $base_url; ?>css/screen.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="../src/ie6.min.js"></script>
+	<link rel="stylesheet" media="all" href="css/screen.css" />
 </head>
 <body>
 
@@ -27,27 +27,27 @@
 
 	<h1>Heretic Clippy</h1>
 
-	<div id="clipzone"><img src="<?php echo $base_url; ?>images/clippy-main.png" width="102" height="98" alt="" class="mr_clippy" /></div>
+	<div id="clipzone"><img src="images/clippy-main.png" width="102" height="98" alt="" class="mr_clippy" /></div>
 
-	<button onclick="this.setAttribute('disabled',1);new Clippy('body','<?php echo $base_url . $version; ?>/').run({override:true});">Try It!</button>
+	<button onclick="this.setAttribute('disabled',1);new Clippy('body','../src/').run({override:true});">Try It!</button>
 	<button onclick="document.getElementById('textzone').style.display='block'; this.parentNode.removeChild(this);">Shut the hell up and give me the code</button>
 
 	<div id="textzone">
 
 		<p><strong>Upload</strong> the script to your webroot or to your CDN, and make a note of the full path.  For example:</p>
-		<code><?php echo html_safe($base_url); ?></code>
+		<code>/clippy/</code>
 
-		<p>
+		<!--<p>
 			<strong>Include</strong>
 			the script into the &lt;head&gt; as shown below, or if you are more into load optimization then rigid standards, at the very very end of your page before the closing body tag.
 		</p>
-		<code><?php echo html_safe("<script src=\"{$base_url}{$version}/ie6-auto.js\"></script>"); ?></code>
+		<code><?php echo html_safe("<script src=\"{$base_url}{$version}/ie6-auto.js\"></script>"); ?></code>-->
 
 		<p><strong>Init</strong> clippy using jQuery's document.ready wrap, eg:</p>
 		<code><?php echo html_safe("<script>
 
 $(function(){
-	new Clippy('body','{$base_url}/clippy/').run();
+	new Clippy('body','/clippy/').run();
 });
 
 </script>"); ?></code>
@@ -56,7 +56,7 @@ $(function(){
 		<code><?php echo html_safe("<script>
 
 __clippyboot(function(){
-	new Clippy(\"body\",\"{$base_url}\").run();
+	new Clippy(\"body\",\"/clippy/\").run();
 });
 
 </script>"); ?></code>
