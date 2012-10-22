@@ -4,6 +4,13 @@
 	$base_url = "./";
 	$version = "1.0.2";
 
+	date_default_timezone_set('America/New_York');
+
+	$ie6_age = date('Y') - 2001;
+	// $ie7_age = date('Y') - 2006;
+	// $ie8_age = date('Y') - 2009;
+	// $ie9_age = date('Y') - 2011;
+
 	function html_safe($string) {return htmlentities($string);}
 
 ?><!DOCTYPE html>
@@ -56,7 +63,7 @@ __clippyboot(function(){
 
 	</div>
 
-	<p>This script will check on pageload to see if the User is running IE6.  If so, Heretic Clippy will appear and offer some browser alternatives.  Quite annoying!  Yet, certainly not as annoying as supporting a browser more than 9 years after it's first release (and 3 major revisions out of date).</p>
+	<p>This script will check on pageload to see if the User is running IE6.  If so, Heretic Clippy will appear and offer some browser alternatives.  Quite annoying!  Yet, certainly not as annoying as supporting a browser more than <?php echo $ie6_age; ?> years after it's first release (and 3 major revisions out of date).</p>
 
 	<pre>
 @version 1.0.2
