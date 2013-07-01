@@ -5,11 +5,7 @@
 	$version = "../minified/";
 
 	date_default_timezone_set('America/New_York');
-
 	$ie6_age = date('Y') - 2001;
-	// $ie7_age = date('Y') - 2006;
-	// $ie8_age = date('Y') - 2009;
-	// $ie9_age = date('Y') - 2011;
 
 	function html_safe($string) {return htmlentities($string);}
 
@@ -18,6 +14,7 @@
 <head>
 	<title>Heretic Clippy</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- <script type="text/javascript" src="../src/ie6.js"></script> -->
 	<script type="text/javascript" src="../src/ie6.min.js"></script>
 	<link rel="stylesheet" media="all" href="css/screen.css" />
 </head>
@@ -67,7 +64,7 @@ __clippyboot(function(){
 	<p>This script will check on pageload to see if the User is running IE6.  If so, Heretic Clippy will appear and offer some browser alternatives.  Quite annoying!  Yet, certainly not as annoying as supporting a browser more than <?php echo $ie6_age; ?> years after it's first release (and several major revisions out of date).</p>
 
 	<pre>
-@version 1.0.2
+@version 1.0.3
 @author sprky0
 	</pre>
 
