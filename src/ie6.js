@@ -1,7 +1,7 @@
 /**
  * Heretic Clippy
  *
- * @version 1.1.0
+ * @version 1.1.1
  * @author sprky0
  * @source https://github.com/sprky0/Heretic-Clippy/blob/master/src/ie6.js
  * @license MIT License, http://opensource.org/licenses/MIT
