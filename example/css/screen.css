@@ -1,6 +1,7 @@
 
 body {background-color: #888;}
 h1,h2,h3,p,a {font-family: helvetica,arial,Sans;}
+a {text-decoration: none}
 
 #wrap {
 	width: 700px; margin: 40px auto; padding: 40px;
@@ -12,16 +13,17 @@ h1,h2,h3,p,a {font-family: helvetica,arial,Sans;}
 h1 {border-bottom: 1px dotted #ccc;}
 img.mr_clippy {position: absolute; top: 30px; right: 30px;}
 
-#textzone {display:none; border: 1px solid #ccc; padding: 20px; margin: 10px 0; }
+#textzone {display:none; border-top: 1px solid #ccc; padding: 0; margin: 10px 0; }
 #textzone code {	
-	margin: 0 0 5px 0; width: 620px;
+	border-radius: 4px;
+	margin: 0 0 5px 0; width: 660px;
 	color: #0f0;
 	background-color:#030;
 	border: 0; padding: 20px;
-	white-space: nowrap; x-overflow: auto;
+	white-space: nowrap;
+	x-overflow: auto;
 	white-space: pre;
 	display: block;
-	overflow-x:auto;
 }
 #textzone p {font-size: 10pt; color: #666;}
 
@@ -57,4 +59,9 @@ pre {font-family: courier;margin: 10px 0 10px 0;padding: 0;}
   padding: 0.5em 3.5em;
   text-align: center;
   text-decoration: none;
+}
+
+div.meta, div.meta a {
+	white-space: pre;
+	font-family: courier;
 }
