@@ -40,7 +40,7 @@
 
 		<h2>Hosted</h2>
 
-		<p><strong>Download</strong> the version you need from <a href="https://github.com/sprky0/Heretic-Clippy/releases">GitHub</a>.  Current version is <a href="https://github.com/sprky0/Heretic-Clippy/archive/1.1.0.zip">v1.1.1</a>.</p>
+		<p><strong>Download</strong> the version you need from <a href="https://github.com/sprky0/Heretic-Clippy/releases">GitHub</a>.  Current version is <a href="https://github.com/sprky0/Heretic-Clippy/archive/1.1.1.zip">v1.1.1</a>.</p>
 		<p><strong>Upload</strong> the script to your webroot or to your CDN, and make a note of the full path.  For example:</p>
 		<code>/clippy/</code>
 
