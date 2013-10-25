@@ -14,8 +14,7 @@
 <head>
 	<title>Heretic Clippy</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<!-- <script type="text/javascript" src="../src/ie6.js"></script> -->
-	<script type="text/javascript" src="../src/ie6.min.js"></script>
+	<script type="text/javascript" src="src/ie6.min.js"></script>
 	<link rel="stylesheet" media="all" href="css/screen.css" />
 </head>
 <body>
@@ -31,14 +30,15 @@
 
 	<div id="textzone">
 
+		<h2>CDN</h2>
+
+		<code><?php echo html_safe('<script type="text/javascript" src="http://clippy.ajbnet.com/latest/ie6-auto.js"></script>'); ?></code>
+		<p><strong>Copy</strong> the above script tag in it's entirety, and insert it into the &lt;head&gt; of your site's header file, or the &lt;head&gt; section of a particular page.</p>
+
+		<h2>Hosted</h2>
+
 		<p><strong>Upload</strong> the script to your webroot or to your CDN, and make a note of the full path.  For example:</p>
 		<code>/clippy/</code>
-
-		<!--<p>
-			<strong>Include</strong>
-			the script into the &lt;head&gt; as shown below, or if you are more into load optimization then rigid standards, at the very very end of your page before the closing body tag.
-		</p>
-		<code><?php echo html_safe("<script src=\"{$base_url}{$version}/ie6-auto.js\"></script>"); ?></code>-->
 
 		<p><strong>Init</strong> clippy using jQuery's document.ready wrap, eg:</p>
 		<code><?php echo html_safe("<script>
@@ -58,13 +58,12 @@ __clippyboot(function(){
 
 </script>"); ?></code>
 
-
 	</div>
 
 	<p>This script will check on pageload to see if the User is running IE6.  If so, Heretic Clippy will appear and offer some browser alternatives.  Quite annoying!  Yet, certainly not as annoying as supporting a browser more than <?php echo $ie6_age; ?> years after it's first release (and several major revisions out of date).</p>
 
 	<pre>
-@version 1.0.3
+@version 1.1.0
 @author sprky0
 	</pre>
 

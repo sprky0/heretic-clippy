@@ -1,4 +1,4 @@
-Hereric-Clippy
+Heretic-Clippy
 ==============
 
 Clippy is back from the grave to let you know that your browser is wrong.
@@ -10,6 +10,5 @@ Put someplace, for example '/clippy/' off your docroot, then use thusly (assumin
 Or thusly without:
 
 ```<script>__clippyboot(function(){new Clippy('body','/clippy/').run();});</script>```
- 
 
 Enjoy!

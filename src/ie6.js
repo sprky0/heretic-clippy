@@ -1,7 +1,10 @@
 /**
  * Heretic Clippy
- * @version 1.0.3
+ *
+ * @version 1.1.0
  * @author sprky0
+ * @source https://github.com/sprky0/Heretic-Clippy/blob/master/src/ie6.js
+ * @license MIT License
  */
 ;(function(window){
 
@@ -79,7 +82,7 @@
 	
 	/* CLIPPY Display */
 	var ClippyDisplay = function(options) {
-	
+
 		this.file_dir = (options.file_dir) ? options.file_dir : "";
 	
 		this.div = document.createElement('div');
@@ -278,11 +281,11 @@
 	Clippy.prototype.run = function(opt) {
 	
 		if(!(opt&&opt.override&&opt.override==true)) {
-			
+
 			// we must make sure we only annoy IE6 users
 			if (!(/MSIE 6/i.test(navigator.userAgent)))
 				return false;
-	
+
 		}
 		
 		

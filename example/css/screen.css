@@ -1,6 +1,6 @@
 
 body {background-color: #888;}
-h1,h3,p,a {font-family: helvetica,arial,Sans;}
+h1,h2,h3,p,a {font-family: helvetica,arial,Sans;}
 
 #wrap {
 	width: 700px; margin: 40px auto; padding: 40px;
@@ -21,6 +21,7 @@ img.mr_clippy {position: absolute; top: 30px; right: 30px;}
 	white-space: nowrap; x-overflow: auto;
 	white-space: pre;
 	display: block;
+	overflow-x:auto;
 }
 #textzone p {font-size: 10pt; color: #666;}
 
