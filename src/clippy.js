@@ -46,8 +46,18 @@
 	}
 
 	/**
+	 * appendChild shorthand function
 	 * 
+	 * @param HTMLElement obj1
+	 * @param HTMLElement|mixed obj2
+	 */
+	var add = function(obj1,obj2) {
+		obj1.appendChild(obj2);
+	}
+
+	/**
 	 * 
+	 *
 	 * @param string Question
 	 * @param boolean reusable Flag the 
 	 */
@@ -87,7 +97,7 @@
 			var div = document.createElement('div');
 			var p = document.createElement('p');
 			p.innerHTML = this.question;
-			div.appendChild(p);
+			add(div,p);
 
 			for(var i = 0; i < this.options.length; i++) {
 				var button = document.createElement('button');
@@ -100,7 +110,7 @@
 						window.location = _Option.URL;
 					}
 				}
-				div.appendChild(button);
+				add(div,button);
 			}
 		
 			if (this.timeout.callback && typeof(this.timeout.callback) == "function") {
@@ -137,9 +147,9 @@
 			img.src = this.file_dir + "clippy-main.png";
 			img.style.position = "relative";
 			img.style.display = "block";
-	
-		this.div.appendChild(img);
-	
+
+		add(this.div,img);
+
 		this.div.style.opacity = (options.visible === false) ? 0 : 1;
 	
 		if (options.click && typeof(options.click) == "function") {
@@ -189,9 +199,9 @@
 	 * Speech Bubble
 	 */
 	var PopupDisplay = function(o,options) {
-	
-		this.file_dir = (options.file_dir) ? options.file_dir : "";
-	
+
+		this.file_dir = options.file_dir || "";
+
 		if (typeof(o) === "string") {
 			p = document.createElement('p');
 			p.innerHTML = o;
@@ -214,24 +224,26 @@
 	
 		var imgTop = new Image();
 		imgTop.src = this.file_dir + "clippy-speech-top.png";
-		imgTop.style.position = "relative";
-		imgTop.style.display = "block";
-		this.div.appendChild(imgTop);
-	
+		css(imgTop,{
+			position : "relative",
+			display : "block"
+		});
+		add(this.div,imgTop);
+
 		this.message = document.createElement('div');
 		this.message.style.background = "transparent url('" + this.file_dir + "clippy-speech-mid.png') top left repeat-y";
 		this.message.style.padding = "8px";
 		this.message.style.font = "11.5px Arial, Verdana, Sans";
-		// this.message.innerHTML = text;
-		this.message.appendChild(o);
-	
-		this.div.appendChild(this.message);
-	
+		add(this.message,o);
+		add(this.div,this.message);
+
 		var imgBottom = new Image();
 		imgBottom.src = this.file_dir + "clippy-speech-bottom.png";
-		imgBottom.style.position = "relative";
-		imgBottom.style.display = "block";
-		this.div.appendChild(imgBottom);
+		css(imgBottom,{
+			position : "relative",
+			display : "block"
+		});
+		add(this.div,imgBottom);
 	
 		this.close = function() {
 			try {
@@ -293,7 +305,7 @@
 				ref = document.getElementById(selector.substr(1,selector.length));
 				var div = document.createElement("div");
 				div.style.position = "relative";
-				ref.appendChild(div);
+				add(ref,div);
 				return div;
 
 			} else {
@@ -312,7 +324,7 @@
 					right : "0"
 				});
 
-				ref.appendChild(div);
+				add(ref,div);
 
 				return div;
 			
@@ -341,7 +353,7 @@
 				file_dir : this.file_dir,
 				visible : false
 			});
-			this.homebase.appendChild( this.character.getElement() );
+			add(this.homebase,this.character.getElement() );
 			this.character.fadeIn(1000);
 		
 			var Help = new HelpText("I see you're trying to <i>use the internet.</i>  Would you like a friendly suggestion to make your browsing experience a more enjoyable and secure?");
@@ -467,7 +479,7 @@
 			}
 		
 			this.bubble = new PopupDisplay(o,{file_dir:this.file_dir});
-			this.homebase.appendChild(this.bubble.getElement());
+			add(this.homebase,this.bubble.getElement());
 		
 		}
 		this.closeBubble = function() {
