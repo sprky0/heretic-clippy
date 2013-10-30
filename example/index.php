@@ -67,7 +67,7 @@ __clippyboot(function(){
 	<div class="meta">
 @version 1.1.1
 @author sprky0
-@license <a href="http://opensource.org/licenses/MIT">MIT Lisence</a>
+@license <a href="http://opensource.org/licenses/MIT">MIT License</a>
 	</div>
 
 	<br class="clear" />
